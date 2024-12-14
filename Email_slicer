@@ -1,0 +1,16 @@
+def email_slicer(email):
+    username, domain = email.split('@')
+    return username, domain
+
+def main():
+    email = input("Enter your email address: ")
+    
+    if '@' in email and '.' in email:
+        username, domain = email_slicer(email)
+        print(f"Username: {username}")
+        print(f"Domain: {domain}")
+    else:
+        print("Invalid email address. Please try again.")
+
+if __name__ == "__main__":
+    main()

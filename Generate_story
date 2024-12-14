@@ -1,0 +1,24 @@
+import random
+
+characters = ["a brave knight", "a clever princess", "a mischievous dragon", "a wise old wizard"]
+settings = ["in a dark forest", "in a bustling city", "on a distant planet", "in a magical kingdom"]
+actions = ["found a hidden treasure", "fought a fierce battle", "made a new friend", "solved an ancient mystery"]
+
+def generate_story():
+    character = random.choice(characters)
+    setting = random.choice(settings)
+    action = random.choice(actions)
+    
+    story = f"Once upon a time, {character} {setting} {action}."
+    return story
+
+def main():
+    print("Welcome to the Random Story Generator!")
+    while True:
+        print("\n" + generate_story())
+        cont = input("Would you like to generate another story? (yes/no): ")
+        if cont.lower() != 'yes':
+            break
+
+if __name__ == "__main__":
+    main() 
